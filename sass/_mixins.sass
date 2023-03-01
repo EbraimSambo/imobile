@@ -1,0 +1,26 @@
+@use 'variables'
+
+
+@mixin flex-center
+    justify-content: center
+    align-items: center
+
+@mixin flex-grid($pri, $sec)
+    grid-template-columns: $pri $sec
+
+
+@mixin grid-utility($rem, $fr, $gap)
+    grid-template-columns: repeat(auto-fit, minmax($rem, $fr))
+    gap: $gap
+
+
+//mobile
+
+@mixin mobile($pixel)
+    @media(max-width: $pixel)
+       @content
+        
+
+   
+    
+    
